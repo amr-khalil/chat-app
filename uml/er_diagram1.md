@@ -1,4 +1,5 @@
 ```mermaid
+
 erDiagram
   CUSTOMER
   SUPPORT_AGENT
@@ -33,7 +34,6 @@ erDiagram
   CHATBOT ||--o| CATEGORY_CLUSTER: categorizes
 
   CATEGORY_CLUSTER ||--|{ SUPPORT_AGENT: routes_to
-
 
   ESCALATION_EVENT }|--|{ SUPPORT_AGENT: involves
 
