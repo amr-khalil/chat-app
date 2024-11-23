@@ -3,9 +3,17 @@
 classDiagram
 
 %% Enums
+class ParticipantType {
+<<enumeration>>
++ CUSTOMER
++ AGENT
++ BOT
++ SYSTEM
+}
 class TicketStatus {
 <<enumeration>>
 + OPEN
++ IN_PROGRESS
 + RESOLVED
 + REASSIGNED
 }
@@ -13,6 +21,7 @@ class TicketStatus {
 class MessageType {
 <<enumeration>>
 + TEXT
++ IMAGE
 + FILE
 + SYSTEM
 }
@@ -179,6 +188,5 @@ class ChatFacade {
 ChatFacade ..> ChatParticipantFactory : uses
 ChatFacade ..> ChatService : uses
 ChatFacade ..> Repository : uses
-
 
 ```

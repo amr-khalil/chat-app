@@ -1,6 +1,28 @@
-# Customer Chat
-
+# Chat App
 Chat software for customer service.
+
+
+## Installation
+
+To install the required dependencies, run:
+
+```bash
+pip install -r requirements.txt
+```
+
+## UML Diagrams
+### ER Diagrams
+![erDiagram](imgs/er_diagram1.png)
+
+### ER Diagrams with Fields
+![erDiagram](imgs/er_diagram2.png)
+
+### Class Diagram
+![classDiagramm](imgs/class_diagram.png)
+
+### System Design
+![systemDesing](imgs/system_design.png)
+
 
 ## Objects / Classes to Create
 
@@ -158,3 +180,4 @@ The Interaction with the frontend occurs via two forms of communication protocol
 
 3. **Notification Service**:  
    Centralized service to handle the creation, delivery, and tracking of real-time, email, and push notifications across platforms.
+
