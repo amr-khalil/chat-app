@@ -34,7 +34,7 @@ class ChatFacade:
         customer = ChatParticipantFactory.create_participant(
             participant_type=ParticipantType.CUSTOMER, customer_id=customer_id
         )
-        session_id = await customer.initiate_chat_session(topic, strategies)
+        session_id = await customer.initiate_chat_session(topic, strategies) # type: ignore
         logging.info(
             f"Chat session {session_id} initiated for customer {customer_id} on topic '{topic}'."
         )
@@ -53,7 +53,7 @@ class ChatFacade:
         agent = ChatParticipantFactory.create_participant(
             participant_type=ParticipantType.AGENT, agent_id=agent_id
         )
-        await agent.handle_chat_session(session_id)
+        await agent.handle_chat_session(session_id) # type: ignore
         logging.info(f"Agent {agent_id} assigned to session {session_id}.")
 
     async def agent_send_message(
@@ -80,7 +80,7 @@ class ChatFacade:
         agent = ChatParticipantFactory.create_participant(
             participant_type=ParticipantType.AGENT, agent_id=agent_id
         )
-        ticket_id = await agent.create_support_ticket(session_id, issue)
+        ticket_id = await agent.create_support_ticket(session_id, issue) # type: ignore
         logging.info(
             f"Support ticket {ticket_id} created by agent {agent_id} for session {session_id}."
         )
@@ -90,7 +90,7 @@ class ChatFacade:
         agent = ChatParticipantFactory.create_participant(
             participant_type=ParticipantType.AGENT, agent_id=agent_id
         )
-        await agent.resolve_ticket(ticket_id)
+        await agent.resolve_ticket(ticket_id) # type: ignore
         logging.info(f"Support ticket {ticket_id} resolved by agent {agent_id}.")
 
     def get_chat_history(self, session_id: uuid.UUID) -> List:

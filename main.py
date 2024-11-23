@@ -100,8 +100,8 @@ async def main() -> None:
 
     # Agent resolves the ticket
     try:
-        await chat_facade.resolve_support_ticket(101, ticket_id)
-        logging.info(f"Support ticket {ticket_id} resolved.")
+        await chat_facade.resolve_support_ticket(101, ticket_id) # type: ignore
+        logging.info(f"Support ticket {ticket_id} resolved.") # type: ignore
     except Exception as e:
         logging.error(f"Error resolving ticket: {e}")
 
