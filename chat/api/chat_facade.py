@@ -113,3 +113,6 @@ class ChatFacade:
 
     def get_agent(self, agent_id: int):
         return Repository.agents.get(agent_id)
+    
+    def list_sessions(self):
+        return list(Repository.chat_sessions.values())

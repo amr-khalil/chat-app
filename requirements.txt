@@ -1,5 +1,7 @@
 -e .
-pytest
-coverage
+fastapi
+uvicorn
 pytest
 pytest-asyncio
+coverage
+

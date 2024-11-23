@@ -14,6 +14,16 @@ run the tests:
 coverage run -m pytest tests --log-cli-level=INFO
 ```
 
+Run a simple REST API and connect the chat_facade to the frontend:
+Typically, WebSockets are used for chat messaging, but for simplicity, I've implemented all the endpoints using REST.
+
+To start the API, use the following command:
+```bash
+uvicorn chat.api.api:app --reload
+```
+Then open the swagger link: http://127.0.0.1:8000/docs
+
+
 ## UML Diagrams
 ### ER Diagrams
 ![erDiagram](imgs/er_diagram1.png)
