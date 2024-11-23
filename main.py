@@ -3,7 +3,7 @@ import asyncio
 
 from typing import List
 
-from chat.services.chat_facade import ChatFacade
+from chat.api.chat_facade import ChatFacade
 from chat.strategies.profanity_filter_strategy import ProfanityFilterStrategy
 from chat.strategies.spam_filter_strategy import SpamFilterStrategy
 from chat.strategies.translation_strategy import TranslationStrategy

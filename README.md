@@ -5,9 +5,13 @@ Chat software for customer service.
 ## Installation
 
 To install the required dependencies, run:
-
 ```bash
 pip install -r requirements.txt
+```
+
+run the tests:
+```bash
+coverage run -m pytest tests --log-cli-level=INFO
 ```
 
 ## UML Diagrams
@@ -175,9 +179,7 @@ The Interaction with the frontend occurs via two forms of communication protocol
 1. **Feedback Feature**:  
    Allow users to provide ratings and feedback for chat sessions to improve service quality and agent performance.
 
-2. **Images & Files Sharing Feature**:  
-   Enable users to share images, documents, and other files securely during chat sessions for better collaboration.
 
-3. **Notification Service**:  
+2. **Notification Service**:  
    Centralized service to handle the creation, delivery, and tracking of real-time, email, and push notifications across platforms.
 

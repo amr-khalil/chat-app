@@ -7,5 +7,5 @@ class TranslationStrategy(MessageProcessingStrategy):
         self.target_language = target_language
 
     def process(self, message: MessageData) -> MessageData:
-        message.content = f"[Translated to {self.target_language}]: Lorem ipsum dolor sit amet, consectetur adipisici elit …"
+        message.content = f"[Translated to {self.target_language}]: Quid agis?"
         return message

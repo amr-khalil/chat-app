@@ -1,3 +1,5 @@
 -e .
 pytest
 coverage
+pytest
+pytest-asyncio
